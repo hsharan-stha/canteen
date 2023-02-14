@@ -1,0 +1,29 @@
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+    <input type="text" name="message" id="message"/>
+    <button type="submit" id="sendMessage">send message</button>
+
+<table>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+
+<script>
+    // Send a POST request
+    $("#sendMessage").click(()=>{
+        axios({
+            method: 'post',
+            url: '/dashboard/chat',
+            data: {
+                message: $("#message").val()
+            }
+        });
+    })
+
+</script>
