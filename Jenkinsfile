@@ -35,7 +35,8 @@ pipeline {
         stage("Deploying Application") {
 
              steps {
-                       start "" /D C:/ProgramData/Jenkins/war/scripts/backend.bat
+
+                       sh('start "" /D C:/ProgramData/Jenkins/war/scripts/backend.bat')
                    }
 
             }
