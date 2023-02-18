@@ -13,7 +13,7 @@ pipeline {
               script{
                    def mvnHome = tool name: 'mvn', type: 'maven'
 
-                       sh "${mvnHome}/bin/mvn clean test"
+                       sh "mvn clean test"
 
                     }
 
@@ -25,7 +25,7 @@ pipeline {
               script{
                    def mvnHome = tool name: 'mvn', type: 'maven'
 
-                       sh "${mvnHome}/bin/mvn clean install"
+                       sh "mvn clean install"
 
                     }
               }
@@ -36,7 +36,7 @@ pipeline {
 
              steps {
 
-                       sh "/var/lib/jenkins/scripts/backend.sh"
+                       sh "mvn spring-boot:run"
                    }
 
             }
